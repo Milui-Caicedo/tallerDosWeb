@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Boogaloo');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$mont: 'Montserrat',
+sans-serif;
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('../font/HoboStd.woff');
+}
+
+$hobot: myFirstFont;
+$azul :#5DADC3;
+$bg: #D1D1D1;
+$green: #15BD00;
+
+* {
+    padding: 0;
+    margin: 0;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h6,
+    li {
+        font-family: $hobot;
+        letter-spacing: 1px;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    h5,
+    p,button,select,option {
+        font-family: $mont;
+    }
+    button {
+        cursor: pointer;
+        border-radius: 36px;
+        padding: 7px;
+        margin: 7px;
+        background-color: $azul;
+        color: $azul;
+        background-color: white;
+        border: 1px solid white;
+        &:hover{
+            border: 1px solid $bg;
+            background-color: $bg;
+        }
+    }
+}
+
+.container {
+    background-color: $bg;
+
+    nav {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: $azul;
+        position: relative;
+
+        ul {
+            font-family: $hobot;
+            color: white;
+            letter-spacing: 1px;
+            padding: 10px;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                padding: 10px;
+            }
+        }
+
+        #carrito-icon {
+            position: absolute;
+            right: 10px;
+        }
+    }
+
+    .landing {
+        background-image: url('../img/bg2.png');
+        background-size: 300px 300px;
+
+        img {
+            display: block;
+            margin: auto;
+            height: 200px;
+            padding: 50px 0 50px 0;
+        }
+    }
+
+    #search {
+        width: 100%;
+        background-color: $azul;
+        
+        .size {
+            display: flex;
+            box-sizing: border-box;
+            width: 90%;
+            margin: auto;
+            box-sizing: border-box;
+            margin: auto;
+
+            select {
+                flex-grow: 5;
+                padding: 7px;
+                margin: 7px;
+                border-radius: 36px;
+                border: 1px solid $azul;
+            }
+
+            button {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    #productos {
+        width: 88%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px auto 20px auto;
+
+        .item {
+            padding: 15px;
+            background-color: white;
+
+            img {
+                width: 100%;
+                border-bottom: 1px solid $bg;
+                margin-bottom: 5px;
+            }
+
+            h5,
+            h3,
+            p {
+                color: $azul;
+                text-transform: capitalize;
+
+                span {
+                    font-size: 12px;
+                }
+            }
+
+            .datos {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 10px;
+
+                p {
+                    color: $green;
+                    font-family: $mont;
+                    font-size: 15px;
+                }
+
+            }
+        }
+    }
+
+    .piezas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color:white;
+        color: $azul;
+        text-align: center;
+        h1,h3{
+            font-family: $mont;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .more-info {
+        color: white;
+        background-color: $azul;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    footer {
+        background-color: white;
+
+        img {
+            margin: auto;
+            display: block;
+            width: 300px;
+        }
+
+        .red-border {
+            height: 20px;
+            background-color: red;
+        }
+    }
+}

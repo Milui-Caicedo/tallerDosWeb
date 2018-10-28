@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a>Acerca de fisher price</a></li>
+                <li><a>Productos</a></li>
+                <li><a>Aplicaciones</a></li>
+            </ul>
+            <a id="carrito-icon"><img src="/img/car.png" alt=""></a>
+        </nav>
+        <div class="landing">
+            <img src="/img/logo.png" alt="">
+        </div>
+        <div id="search">
+            <div class="size">
+                <select name="marca" id="">
+                    <option value="little people">Little People</option>
+                    <option value="Tomas and friends">Tomas and friends</option>
+                    <option value="power wheels">Power Wheels</option>
+                    <option value="shimmer and shine">Shimmer And Shine</option>
+                </select>
+                <select name="edad" id="">
+                    <option value="1">1 años</option>
+                    <option value="2">2 años</option>
+                    <option value="3">3 años</option>
+                    <option value="4">4 años</option>
+                    <option value="5">5 años</option>
+                </select>
+                <select name="precio" id="">
+                    <option value="figuras">Figuras de acción</option>
+                    <option value="casas">Casas</option>
+                    <option value="carros">Carros</option>
+                    <option value="accesorios">Accesorios</option>
+                </select>
+                <button>search</button>
+            </div>
+        </div>
+        <div id="productos">
+            {{#each productos}}
+            <a href="/producto/{{name}}">
+                <div class="item {{#if descuento}}descuento{{/if}}">
+                    <img src="/img/{{name}}.jpg" alt="">
+                    <h5>{{marca}} - {{name}}</h5>
+                    <div class="datos">
+                        <h3>${{price}} <span>c/p</span></h3>
+                        <p>{{age}} años</p>
+                    </div>
+                </div>
+            </a>
+            {{/each}}
+        </div>
+        <div class="piezas">
+            <img src="/img/borde2.png" alt="">
+            <div class="repuesto">
+                <h1>¿Necesitas piezas de repuesto?</h1>
+                <h3>las puedes ordenar por nuestra página de servicio al cliente</h3>
+            </div>
+            <img src="/img/boder1.png" alt="">
+        </div>
+        <div class="more-info">
+            <h1>+ Más información</h1>
+        </div>
+        <footer>
+            <img src="/img/logo.png" alt="">
+            <div class="red-border"></div>
+        </footer>
+    </div>
+</body>
+
+</html>
