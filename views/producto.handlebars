@@ -28,7 +28,7 @@
 
                 <img src="/img/{{name}}.jpg" alt="">
             </div>
-            <div class="info" data-name="{{name}}"> 
+            <div class="info" data-name="{{name}}">
                 <div class="title">
                     <h1>{{marca}} - {{name}}</h1>
                     <h4>Edad: {{age}} años</h4>
@@ -41,7 +41,13 @@
                 <button id="add">Agregar al carrito</button>
             </div>
         </div>
-
+        <div class="carril">
+            {{#each imgs}}
+            <div class="img-carril">
+                <img src="{{this}}" alt="">
+            </div>
+            {{/each}}
+        </div>
         <div class="carct">
             <h1>Caracteristicas del producto</h1>
             <p>{{carac}}</p>

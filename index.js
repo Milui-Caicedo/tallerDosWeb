@@ -68,25 +68,27 @@ app.get('/producto/:id', (reques, response) => {
   });
   collection.toArray((err, res) => {
 
+    //Metodo para saber si existen los imagenes y cuanta cantidad para luego pasarl y ser visualizadas en el producto
     var img = [];
 
-    for (var i = 0; i < 4; i++) {
-      var path = 'public/img/' + res[0].name + i;
+    for (var i = 2; i < 5; i++) {
+      var path = 'public/img/' + res[0].name.trim() + i+'.jpg';
       if (fs.existsSync(path)) {
-        img.push('public/img/' + res[0].name + i);
+        img.push('/img/' + res[0].name + i+'.jpg');
+        console.log('existe');
         continue;
       }
-      console.log('muere en: '+i);
+      console.log('muere en: '+path);
       break;
     }
-
+    console.log(img)
     response.render('producto', {
       name: res[0].name,
       price: res[0].price,
       age: res[0].age,
       marca: res[0].marca,
       carac: res[0].caracteristics,
-      imgs: 'df'
+      imgs: img
     });
   });
 });

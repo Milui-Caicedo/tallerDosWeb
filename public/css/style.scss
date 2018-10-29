@@ -228,6 +228,7 @@ $green: #15BD00;
         width: 70%;
         background-color: white;
         margin: auto;
+
         @media only screen and (max-width: 700px) {
             width: 90%;
         }
@@ -250,7 +251,7 @@ $green: #15BD00;
             flex-direction: column;
             align-content: space-between;
             justify-content: space-between;
-            
+
 
             button {
                 width: 100%;
@@ -275,12 +276,30 @@ $green: #15BD00;
         }
     }
 
+    .carril {
+        display: flex;
+        width: 70%;
+        margin: auto;
+        background-color: $azul;
+        @media only screen and (max-width: 700px) {
+            width: 90%;
+        }
+
+        .img-carril {
+            box-sizing: border-box;
+            flex: 1;
+            margin: 10px;
+            img {width: 100%;}
+        }
+    }
+
     .carct {
         width: 70%;
         margin: auto;
         color: gray;
         background-color: white;
         border-top: 1px solid $bg;
+
         @media only screen and (max-width: 700px) {
             width: 90%;
         }
@@ -317,14 +336,15 @@ $green: #15BD00;
                 transform: translate(-50%, -50%);
                 background-color: white;
                 padding: 10px;
-                h3{
+
+                h3 {
                     font-size: 13px;
                 }
 
-                h1{
+                h1 {
                     font-size: 16px;
                 }
-            
+
             }
 
             h1,
@@ -345,6 +365,7 @@ $green: #15BD00;
         margin: auto;
         align-items: flex-start;
         width: 80%;
+
         @media only screen and (max-width: 700px) {
             flex-direction: column;
             align-items: stretch;
@@ -353,6 +374,7 @@ $green: #15BD00;
 
         .buyed {
             flex-grow: 2;
+
             @media only screen and (max-width: 700px) {
                 flex: 0;
             }
@@ -364,6 +386,7 @@ $green: #15BD00;
                 margin: 10px;
                 background-color: white;
                 border-radius: 0 10px 10px 0;
+
                 @media only screen and (max-width: 700px) {
                     border-radius: 5px;
                 }
@@ -386,8 +409,8 @@ $green: #15BD00;
                     flex-direction: column;
                     align-content: flex-start;
                     justify-content: space-around;
-                    
-                  
+
+
                     h3,
                     h4 {
                         font-family: $mont;
@@ -405,6 +428,7 @@ $green: #15BD00;
             flex-grow: 1;
             border-radius: 10px;
             box-sizing: border-box;
+
             @media only screen and (max-width: 700px) {
                 border-radius: 5px;
                 flex: 0;
