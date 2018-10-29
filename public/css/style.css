@@ -29,15 +29,18 @@
 * p,
 * button,
 * select,
-* option, * label {
+* option,
+* label {
   font-family: "Montserrat", sans-serif;
 }
 
-* p, * label {
+* p,
+* label {
   font-size: 13px;
 }
 
-* input, * select {
+* input,
+* select {
   font-family: "Montserrat", sans-serif;
   padding: 7px;
   border-radius: 36px;
@@ -105,6 +108,17 @@
   display: flex;
 }
 
+@media only screen and (max-width: 700px) {
+  .container nav #carrito-icon {
+    right: 0;
+    top: 140px;
+    background-color: #5DADC3;
+    position: fixed;
+    padding: 10px;
+    border-radius: 4px 0 0 4px;
+  }
+}
+
 .container nav #carrito-icon .carrito {
   font-family: "Montserrat", sans-serif;
   margin-right: 10px;
@@ -128,6 +142,13 @@
   padding: 50px 0 50px 0;
 }
 
+@media only screen and (max-width: 700px) {
+  .container .landing img {
+    width: 50%;
+    height: auto;
+  }
+}
+
 .container #search {
   width: 100%;
   background-color: #5DADC3;
@@ -141,8 +162,16 @@
           box-sizing: border-box;
   width: 90%;
   margin: auto;
-  box-sizing: border-box;
   margin: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .container #search .size {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .container #search .size select {
@@ -169,6 +198,14 @@
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   margin: 20px auto 20px auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .container #productos {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+  }
 }
 
 .container #productos .item {
@@ -229,6 +266,12 @@
   width: 70%;
   background-color: white;
   margin: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .container .producto {
+    width: 90%;
+  }
 }
 
 .container .producto .img {
@@ -292,6 +335,12 @@
   border-top: 1px solid #D1D1D1;
 }
 
+@media only screen and (max-width: 700px) {
+  .container .carct {
+    width: 90%;
+  }
+}
+
 .container .carct h1 {
   text-align: center;
   margin-top: 30px;
@@ -321,8 +370,32 @@
   text-align: center;
 }
 
-.container .piezas h1,
-.container .piezas h3 {
+@media only screen and (max-width: 700px) {
+  .container .piezas {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container .piezas .repuesto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+  }
+  .container .piezas .repuesto h3 {
+    font-size: 13px;
+  }
+  .container .piezas .repuesto h1 {
+    font-size: 16px;
+  }
+}
+
+.container .piezas .repuesto h1,
+.container .piezas .repuesto h3 {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -346,10 +419,31 @@
   width: 80%;
 }
 
+@media only screen and (max-width: 700px) {
+  .container main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    width: 90%;
+  }
+}
+
 .container main .buyed {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
+}
+
+@media only screen and (max-width: 700px) {
+  .container main .buyed {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
 }
 
 .container main .buyed .item {
@@ -363,6 +457,12 @@
   margin: 10px;
   background-color: white;
   border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .container main .buyed .item {
+    border-radius: 5px;
+  }
 }
 
 .container main .buyed .item .img {
@@ -392,7 +492,8 @@
       justify-content: space-around;
 }
 
-.container main .buyed .item .dato h3, .container main .buyed .item .dato h4 {
+.container main .buyed .item .dato h3,
+.container main .buyed .item .dato h4 {
   font-family: "Montserrat", sans-serif;
   color: gray;
 }
@@ -405,6 +506,18 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (max-width: 700px) {
+  .container main .data {
+    border-radius: 5px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    margin-left: 10px;
+  }
 }
 
 .container main .data h3 {
