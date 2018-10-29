@@ -283,17 +283,56 @@ $green: #15BD00;
     main {
         display: flex;
         flex-direction: row;
+        margin: auto;
+        align-items: flex-start;
+        width: 80%;
+        .buyed{
+            flex-grow: 2;
+            .item{
+                display: flex;
+                justify-content: flex-start;
+                padding: 10px;
+                margin: 10px;
+                background-color: white;
+                border-radius: 0 10px 10px 0;
+                .img{
+                    margin: 10px;
+                    img{
+                        width: 100px;
+                    }
+                }
+                .dato{
+                    margin-left: 10px;
+                    padding-left: 10px;
+                    border-left: 1px solid $bg;
+                    color: $azul;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: flex-start;
+                    justify-content: space-around;
+                    h3,h4{
+                        font-family: $mont;
+                    }
+                }
+            }
+        }
+
 
         .data {
             padding: 10px;
+            margin: 10px 10px 10px 0;
             background-color: white;
+            flex-grow: 1;
+            border-radius: 10px;
+            h3{
+                color: $azul;
+            }
             form {
-                label{
-                    margin: 10px 0 10px 10px;
-                    
-                }
                 display: flex;
                 flex-direction: column;
+                label{
+                    margin: 10px 0 10px 10px;
+                }
             }
         }
     }

@@ -338,11 +338,74 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 80%;
+}
+
+.container main .buyed {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.container main .buyed .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+.container main .buyed .item .img {
+  margin: 10px;
+}
+
+.container main .buyed .item .img img {
+  width: 100px;
+}
+
+.container main .buyed .item .dato {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #D1D1D1;
+  color: #5DADC3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container main .buyed .item .dato h3, .container main .buyed .item .dato h4 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .container main .data {
   padding: 10px;
+  margin: 10px 10px 10px 0;
   background-color: white;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 10px;
+}
+
+.container main .data h3 {
+  color: #5DADC3;
 }
 
 .container main .data form {

@@ -10,6 +10,10 @@ const dbName = 'tienda';
 const client = new MongoClient(url);
 var db = null;
 
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
 client.connect(function (err) {
   if (err) {
     console.error(err);
@@ -58,9 +62,10 @@ app.get('/checkout', (reques, response) => {
   response.render('checkout');
 });
 
-app.get('/agregarinfo', (reques, response) => {
+app.post('/agregarinfo', (reques, response) => {
+  console.log(reques.body);
   if (reques.body.name)
-    var name = reques.body.name
+    var nombre = reques.body.name
   else
     return
   if (reques.body.apellido)
@@ -75,23 +80,35 @@ app.get('/agregarinfo', (reques, response) => {
     var metodo = reques.body.metodo
   else
     return
-  console.log('se registró esta mierda');
-  const ventas = db.collection('ventas');
-  ventas.insert({
-    name: name,
-    apellido: apellido,
-    direccion: direccion,
-    metodo: metodo,
+
+  console.log('se registró');
+
+  db.collection('ventas').insert({
+    name: nombre,
+    lastname: apellido,
+    addres: direccion,
+    method: metodo,
   }, (err, result) => {
     if (err) {
       console.error(err);
       response.send(err);
       return;
     }
-    response.send('documento agregado');
+    response.send("Muchas gracias");
   });
 
 
+});
+
+app.get('/productos-en-carrito', (reques, response) => {
+  var productos = reques.query.names.split(',');
+  db.collection('fpproductos').find({
+    name: {
+      $in: productos
+    }
+  }).toArray((err, result) => {
+    response.send(result);
+  });
 });
 
 app.listen(5000, () => {
