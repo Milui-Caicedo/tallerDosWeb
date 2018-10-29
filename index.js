@@ -33,6 +33,21 @@ app.set('view engine', 'handlebars');
 app.get('/', (reques, response) => {
   const collection = db.collection('fpproductos').find();
 
+  if (reques.query.marca)
+    collection.filter({
+      marca: reques.query.marca
+    });
+
+  if (reques.query.categoria)
+    collection.filter({
+      categoria: reques.query.categoria
+    });
+  if (reques.query.edad)
+    collection.filter({
+      age: parseInt(reques.query.edad)
+    });
+
+
   collection.toArray((err, docs) => {
 
     var contexto = {
