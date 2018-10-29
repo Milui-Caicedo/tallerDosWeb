@@ -25,8 +25,15 @@
 }
 
 * h5,
-* p, * button, * select, * option {
+* p,
+* button,
+* select,
+* option {
   font-family: "Montserrat", sans-serif;
+}
+
+* p {
+  font-size: 13px;
 }
 
 * button {
@@ -37,11 +44,11 @@
   background-color: #5DADC3;
   color: #5DADC3;
   background-color: white;
-  border: 1px solid white;
+  border: 1px solid #5DADC3;
 }
 
 * button:hover {
-  border: 1px solid #D1D1D1;
+  border: 1px solid #5DADC3;
   background-color: #D1D1D1;
 }
 
@@ -186,6 +193,93 @@
   font-size: 15px;
 }
 
+.container .producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70%;
+  background-color: white;
+  margin: auto;
+}
+
+.container .producto .img {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  margin: 10px;
+}
+
+.container .producto .img img {
+  width: 100%;
+}
+
+.container .producto .info {
+  color: #5DADC3;
+  margin: 10px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .producto .info button {
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.container .producto .info > h1 {
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.container .producto .info .title {
+  border-bottom: 1px solid #D1D1D1;
+  padding: 5px;
+}
+
+.container .producto .info .title > h4 {
+  margin-top: 20px;
+  color: gray;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container .carct {
+  width: 70%;
+  margin: auto;
+  color: gray;
+  background-color: white;
+  border-top: 1px solid #D1D1D1;
+}
+
+.container .carct h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container .carct p {
+  margin-top: 10px;
+  padding: 20px;
+}
+
 .container .piezas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,7 +299,8 @@
   text-align: center;
 }
 
-.container .piezas h1, .container .piezas h3 {
+.container .piezas h1,
+.container .piezas h3 {
   font-family: "Montserrat", sans-serif;
 }
 
