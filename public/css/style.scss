@@ -30,18 +30,24 @@ $green: #15BD00;
 
     a {
         text-decoration: none;
+        color: white;
     }
 
     h5,
     p,
     button,
     select,
-    option {
+    option,label {
         font-family: $mont;
     }
 
-    p{
+    p,label {
         font-size: 13px;
+    }
+    input,select{
+        padding: 5px;
+        border-radius: 36px;
+        border: 1px solid $azul;
     }
 
     button {
@@ -90,6 +96,17 @@ $green: #15BD00;
         #carrito-icon {
             position: absolute;
             right: 10px;
+            display: flex;
+            .carrito{
+                font-family: $mont;
+                margin-right: 10px;
+                margin-top: 2px;
+                color: $azul;
+                font-size: 13px;
+                background-color: white;
+                padding: 10px 15px 10px 15px;
+                border-radius: 35px;
+            }
         }
     }
 
@@ -182,6 +199,7 @@ $green: #15BD00;
         width: 70%;
         background-color: white;
         margin: auto;
+
         .img {
             flex-grow: 3;
             margin: 10px;
@@ -200,37 +218,43 @@ $green: #15BD00;
             flex-direction: column;
             align-content: space-between;
             justify-content: space-between;
-            button{
+
+            button {
                 width: 100%;
                 align-self: flex-end;
             }
-            >h1{
+
+            >h1 {
                 margin-top: 20px;
                 text-transform: capitalize;
             }
-            
+
             .title {
-                >h4{
+                >h4 {
                     margin-top: 20px;
                     color: gray;
                     font-family: $mont;
                 }
+
                 border-bottom: 1px solid $bg;
                 padding: 5px;
             }
         }
     }
-    .carct{
+
+    .carct {
         width: 70%;
         margin: auto;
         color: gray;
         background-color: white;
         border-top: 1px solid $bg;
-        h1{
+
+        h1 {
             text-align: center;
             margin-top: 30px;
         }
-        p{
+
+        p {
             margin-top: 10px;
             padding: 20px;
         }
@@ -253,6 +277,24 @@ $green: #15BD00;
         img {
             width: 200px;
             height: 200px;
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+
+        .data {
+            padding: 10px;
+            background-color: white;
+            form {
+                label{
+                    margin: 10px 0 10px 10px;
+                    
+                }
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
 

@@ -22,18 +22,25 @@
 
 * a {
   text-decoration: none;
+  color: white;
 }
 
 * h5,
 * p,
 * button,
 * select,
-* option {
+* option, * label {
   font-family: "Montserrat", sans-serif;
 }
 
-* p {
+* p, * label {
   font-size: 13px;
+}
+
+* input, * select {
+  padding: 5px;
+  border-radius: 36px;
+  border: 1px solid #5DADC3;
 }
 
 * button {
@@ -92,6 +99,20 @@
 .container nav #carrito-icon {
   position: absolute;
   right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container nav #carrito-icon .carrito {
+  font-family: "Montserrat", sans-serif;
+  margin-right: 10px;
+  margin-top: 2px;
+  color: #5DADC3;
+  font-size: 13px;
+  background-color: white;
+  padding: 10px 15px 10px 15px;
+  border-radius: 35px;
 }
 
 .container .landing {
@@ -307,6 +328,35 @@
 .container .piezas img {
   width: 200px;
   height: 200px;
+}
+
+.container main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container main .data {
+  padding: 10px;
+  background-color: white;
+}
+
+.container main .data form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container main .data form label {
+  margin: 10px 0 10px 10px;
 }
 
 .container .more-info {

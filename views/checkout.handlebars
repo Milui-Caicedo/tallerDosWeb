@@ -23,30 +23,29 @@
             <img src="/img/logo.png" alt="">
         </div>
 
-        <div class="producto">
-            <div class="img">
 
-                <img src="/img/{{name}}.jpg" alt="">
+        <main>
+            <div class="buyed">
+
             </div>
-            <div class="info" data-name="{{name}}"> 
-                <div class="title">
-                    <h1>{{marca}} - {{name}}</h1>
-                    <h4>Edad: {{age}} años</h4>
-                </div>
-                <div class="precio">
-
-                    <h3>Precio</h3>
-                    <h1>$ {{price}}</h1>
-                </div>
-                <button id="add">Agregar al carrito</button>
+            <div class="data">
+                <h3>Detalles de facturacion</h3>
+                <form action="">
+                    <label for="">Nombre</label>
+                    <input name="name" type="text">
+                    <label for="">Apellido</label>
+                    <input name="apellido" type="text">
+                    <label for="">Direccion</label>
+                    <input name="direccion" type="text">
+                    <label for="">Metodo de pago</label>
+                    <select name="metodo" id="">
+                        <option value="credito">credito</option>
+                        <option value="efectivo">efectivo</option>
+                    </select>
+                    <button>Terminar compra</button>
+                </form>
             </div>
-        </div>
-
-        <div class="carct">
-            <h1>Caracteristicas del producto</h1>
-            <p>{{carac}}</p>
-        </div>
-
+        </main>
         <div class="piezas">
             <img src="/img/borde2.png" alt="">
             <div class="repuesto">
@@ -63,8 +62,8 @@
             <div class="red-border"></div>
         </footer>
     </div>
-    <script src="/js/actualizar.js"></script>
-    <script src="/js/agregar.js"></script>
+        <script src="/js/actualizar.js"></script>
+
 </body>
 
 </html>

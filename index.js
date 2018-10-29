@@ -54,6 +54,10 @@ app.get('/producto/:id', (reques, response) => {
   });
 });
 
+app.get('/checkout',(reques,response)=>{
+  response.render('checkout');
+})
+
 app.listen(5000, () => {
   console.log("escuchando al puerto 5000");
 });
