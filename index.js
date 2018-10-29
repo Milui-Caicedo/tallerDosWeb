@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const hbs = require('express-handlebars');
 const MongoClient = require('mongodb').MongoClient;
+const fs = require('fs');
 
 const app = express();
 const url = 'mongodb://localhost:27017';
@@ -59,16 +60,33 @@ app.get('/', (reques, response) => {
 
 app.get('/producto/:id', (reques, response) => {
   console.log(reques.params.id);
+
+
+
   const collection = db.collection('fpproductos').find({
     name: reques.params.id
   });
   collection.toArray((err, res) => {
+
+    var img = [];
+
+    for (var i = 0; i < 4; i++) {
+      var path = 'public/img/' + res[0].name + i;
+      if (fs.existsSync(path)) {
+        img.push('public/img/' + res[0].name + i);
+        continue;
+      }
+      console.log('muere en: '+i);
+      break;
+    }
+
     response.render('producto', {
       name: res[0].name,
       price: res[0].price,
       age: res[0].age,
       marca: res[0].marca,
-      carac: res[0].caracteristics
+      carac: res[0].caracteristics,
+      imgs: 'df'
     });
   });
 });
@@ -95,6 +113,10 @@ app.post('/agregarinfo', (reques, response) => {
     var metodo = reques.body.metodo
   else
     return
+  if (reques.body.cc)
+    var cc = reques.body.cc
+  else
+    return
 
   console.log('se registró');
 
@@ -103,6 +125,7 @@ app.post('/agregarinfo', (reques, response) => {
     lastname: apellido,
     addres: direccion,
     method: metodo,
+    cedula: cc
   }, (err, result) => {
     if (err) {
       console.error(err);
