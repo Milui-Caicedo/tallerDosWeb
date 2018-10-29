@@ -45,7 +45,8 @@ $green: #15BD00;
         font-size: 13px;
     }
     input,select{
-        padding: 5px;
+        font-family: $mont;
+        padding: 7px;
         border-radius: 36px;
         border: 1px solid $azul;
     }
@@ -302,6 +303,7 @@ $green: #15BD00;
                     }
                 }
                 .dato{
+                    text-transform: capitalize;
                     margin-left: 10px;
                     padding-left: 10px;
                     border-left: 1px solid $bg;
@@ -312,6 +314,7 @@ $green: #15BD00;
                     justify-content: space-around;
                     h3,h4{
                         font-family: $mont;
+                        color: gray;
                     }
                 }
             }

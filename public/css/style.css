@@ -38,7 +38,8 @@
 }
 
 * input, * select {
-  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  padding: 7px;
   border-radius: 36px;
   border: 1px solid #5DADC3;
 }
@@ -373,6 +374,7 @@
 }
 
 .container main .buyed .item .dato {
+  text-transform: capitalize;
   margin-left: 10px;
   padding-left: 10px;
   border-left: 1px solid #D1D1D1;
@@ -392,6 +394,7 @@
 
 .container main .buyed .item .dato h3, .container main .buyed .item .dato h4 {
   font-family: "Montserrat", sans-serif;
+  color: gray;
 }
 
 .container main .data {

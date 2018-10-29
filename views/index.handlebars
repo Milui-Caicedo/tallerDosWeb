@@ -17,33 +17,36 @@
                 <li><a href="/">Productos</a></li>
                 <li><a>Aplicaciones</a></li>
             </ul>
-            <a id="carrito-icon"><span class="carrito"></span><img src="/img/car.png" alt=""></a>
+            <a id="carrito-icon" href="/checkout"><span class="carrito"></span><img src="/img/car.png" alt=""></a>
         </nav>
         <div class="landing">
             <img src="/img/logo.png" alt="">
         </div>
         <div id="search">
             <div class="size">
-                <select name="marca" id="">
+                <select name="marca" id="marca">
+                    <option value="" disabled selected hidden>Marca</option>
                     <option value="little people">Little People</option>
                     <option value="Tomas and friends">Tomas and friends</option>
                     <option value="power wheels">Power Wheels</option>
                     <option value="shimmer and shine">Shimmer And Shine</option>
                 </select>
-                <select name="edad" id="">
+                <select name="edad" id="edad">
+                    <option value="" disabled selected hidden>Edad</option>
                     <option value="1">1 años</option>
                     <option value="2">2 años</option>
                     <option value="3">3 años</option>
                     <option value="4">4 años</option>
                     <option value="5">5 años</option>
                 </select>
-                <select name="precio" id="">
+                <select name="categoria" id="categoria">
+                    <option value="" disabled selected hidden>Categoria</option>
                     <option value="figuras">Figuras de acción</option>
                     <option value="casas">Casas</option>
                     <option value="carros">Carros</option>
                     <option value="accesorios">Accesorios</option>
                 </select>
-                <button>search</button>
+                <button id="buscar">search</button>
             </div>
         </div>
         <div id="productos">
@@ -76,6 +79,8 @@
             <div class="red-border"></div>
         </footer>
     </div>
-        <script src="/js/actualizar.js"></script>
+    <script src="/js/busqueda.js"></script>
+    <script src="/js/actualizar.js"></script>
 </body>
+
 </html>
