@@ -46,17 +46,53 @@ app.get('/producto/:id', (reques, response) => {
   collection.toArray((err, res) => {
     response.render('producto', {
       name: res[0].name,
-      price : res[0].price,
-      age : res[0].age,
-      marca : res[0].marca,
-      carac : res[0].caracteristics
+      price: res[0].price,
+      age: res[0].age,
+      marca: res[0].marca,
+      carac: res[0].caracteristics
     });
   });
 });
 
-app.get('/checkout',(reques,response)=>{
+app.get('/checkout', (reques, response) => {
   response.render('checkout');
-})
+});
+
+app.get('/agregarinfo', (reques, response) => {
+  if (reques.body.name)
+    var name = reques.body.name
+  else
+    return
+  if (reques.body.apellido)
+    var apellido = reques.body.apellido
+  else
+    return
+  if (reques.body.direccion)
+    var direccion = reques.body.direccion
+  else
+    return
+  if (reques.body.metodo)
+    var metodo = reques.body.metodo
+  else
+    return
+  console.log('se registró esta mierda');
+  const ventas = db.collection('ventas');
+  ventas.insert({
+    name: name,
+    apellido: apellido,
+    direccion: direccion,
+    metodo: metodo,
+  }, (err, result) => {
+    if (err) {
+      console.error(err);
+      response.send(err);
+      return;
+    }
+    response.send('documento agregado');
+  });
+
+
+});
 
 app.listen(5000, () => {
   console.log("escuchando al puerto 5000");
