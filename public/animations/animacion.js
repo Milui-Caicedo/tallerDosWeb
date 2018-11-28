@@ -10,7 +10,8 @@
         
         //vamos si funciona la transicion de los productos XD
         var pro = document.querySelector(".productos");
-        tl.add(TweenLite.from(pro, 1, {opacity:0, y:50}));
+        if(pro != null){
+        tl.add(TweenLite.from(pro, 1, {opacity:0, y:50}));}
         //tl.add(TweenLite.to(pro, 3 ,{opacity:0, y:50}));
         //TweenLite.to(pro, 3 ,{opacity:0, y:50});
     

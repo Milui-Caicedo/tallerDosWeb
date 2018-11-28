@@ -31,7 +31,11 @@ app.use(express.static('public'));
 app.engine('handlebars', hbs());
 app.set('view engine', 'handlebars');
 
-app.get('/', (reques, response) => {
+app.get('/',(reques,response) => {
+  response.render('landing');
+});
+
+app.get('/tienda', (reques, response) => {
   const collection = db.collection('fpproductos').find();
 
   if (reques.query.marca)
@@ -54,7 +58,7 @@ app.get('/', (reques, response) => {
     var contexto = {
       productos: docs,
     }
-    console.log(docs);
+    //console.log(docs);
     response.render('index', contexto);
   });
 });
