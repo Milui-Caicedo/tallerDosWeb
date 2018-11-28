@@ -554,7 +554,13 @@ $green: #15BD00;
     }
 
     footer {
-        background-color: white;
+        background-color:white; 
+
+        a {
+            color: cadetblue;
+            font-family: $mont;
+            font-size:10pt;
+        }
 
         img {
             margin: auto;
@@ -566,6 +572,40 @@ $green: #15BD00;
             height: 20px;
             background-color: red;
         }
+    }
+
+    .footer__gray{
+        height: 120px;
+        width: 100%;
+        background-color: #e6e6e6;
+        align-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+    
+    .footer__gray article{
+        display: flex;
+        flex-flow: row;
+    }
+    
+    .footer__right,
+    .footer__left{
+        width: 50%;
+    }
+    
+    .footer__right ul,
+    .footer__left ul{
+        align-content: center;
+        text-align: center;
+        list-style:none;
+    }
+    
+    footer p{
+        padding: 10px;
+        text-align: center;
+        position:bottom;
+        color: #666666;
+        font-size: 10pt;
     }
 
     .img-comp-container{

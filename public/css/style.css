@@ -670,6 +670,12 @@
   background-color: white;
 }
 
+.container footer a {
+  color: cadetblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10pt;
+}
+
 .container footer img {
   margin: auto;
   display: block;
@@ -679,6 +685,49 @@
 .container footer .red-border {
   height: 20px;
   background-color: red;
+}
+
+.container .footer__gray {
+  height: 120px;
+  width: 100%;
+  background-color: #e6e6e6;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.container .footer__gray article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.container .footer__right,
+.container .footer__left {
+  width: 50%;
+}
+
+.container .footer__right ul,
+.container .footer__left ul {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  list-style: none;
+}
+
+.container footer p {
+  padding: 10px;
+  text-align: center;
+  position: bottom;
+  color: #666666;
+  font-size: 10pt;
 }
 
 .container .img-comp-container {
@@ -692,7 +741,7 @@
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  height: 450px;
+  height: 400px;
 }
 
 .container .img-comp-container .img-comp-img {
