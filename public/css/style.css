@@ -149,15 +149,16 @@
   background-size: 300px 300px;
 }
 
-.container .landing img {
+.container .landing .img-landing {
   display: block;
   margin: auto;
   height: 200px;
   padding: 50px 0 50px 0;
+  position: relative;
 }
 
 @media only screen and (max-width: 700px) {
-  .container .landing img {
+  .container .landing .img-landing {
     width: 50%;
     height: auto;
   }
@@ -406,7 +407,6 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 10px;
 }
 
 .container .carril .img-carril img {

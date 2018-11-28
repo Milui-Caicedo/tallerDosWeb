@@ -34,7 +34,19 @@ fetch('http://localhost:5000/productos-en-carrito?names='+items).then(function(r
         e.addEventListener('click', (elem) => {
             // hacer funcion de eliminar
             localStorage.removeItem(e.parentElement.getAttribute('data-id'));
-            console.log(e.parentElement.getAttribute('data-name'));
+            console.log();
+            var arregloLocal = localStorage.getItem('items');
+            arregloLocal = JSON.parse(arregloLocal);
+
+            //console.log(arregloLocal.length);
+            for(x in arregloLocal){
+                if(arregloLocal[x].indexOf(e.parentElement.getAttribute('data-name'))){
+                    console.log('prendeio'+arregloLocal[x]);
+                    arregloLocal.splice(x,1);
+
+                    localStorage.setItem('items', JSON.stringify(arregloLocal));
+                }
+            }
         });
     })
     document.querySelectorAll('.cantidad').forEach((e)=>{
