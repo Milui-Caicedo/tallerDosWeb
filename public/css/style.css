@@ -204,7 +204,7 @@
           flex-grow: 1;
 }
 
-.container #productos {
+.container .productos {
   width: 88%;
   display: -ms-grid;
   display: grid;
@@ -216,26 +216,26 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .container #productos {
+  .container .productos {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     width: 95%;
   }
 }
 
-.container #productos .item {
+.container .productos .item {
   padding: 15px;
   background-color: white;
   position: relative;
 }
 
-.container #productos .item img {
+.container .productos .item img {
   width: 100%;
   border-bottom: 1px solid #D1D1D1;
   margin-bottom: 5px;
 }
 
-.container #productos .item .carrito-add {
+.container .productos .item .carrito-add {
   position: absolute;
   width: 25px;
   padding: 5px;
@@ -244,25 +244,25 @@
   background-color: #5DADC3;
 }
 
-.container #productos .item .carrito-add:hover {
+.container .productos .item .carrito-add:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.container #productos .item h5,
-.container #productos .item h3,
-.container #productos .item p {
+.container .productos .item h5,
+.container .productos .item h3,
+.container .productos .item p {
   color: #5DADC3;
   text-transform: capitalize;
 }
 
-.container #productos .item h5 span,
-.container #productos .item h3 span,
-.container #productos .item p span {
+.container .productos .item h5 span,
+.container .productos .item h3 span,
+.container .productos .item p span {
   font-size: 12px;
 }
 
-.container #productos .item .datos {
+.container .productos .item .datos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,7 +276,7 @@
   margin-top: 10px;
 }
 
-.container #productos .item .datos p {
+.container .productos .item .datos p {
   color: #15BD00;
   font-family: "Montserrat", sans-serif;
   font-size: 13px;

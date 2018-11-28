@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     
 
-    <title>Document</title>
+    <title>Fisher Price</title>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
                 <button id="buscar">search</button>
             </div>
         </div>
-        <div id="productos">
+        <div class="productos">
             {{#each productos}}
             <div class="item {{#if descuento}}descuento{{/if}}" data-name="{{name}}">
                 <a href="/producto/{{name}}">
@@ -91,6 +91,7 @@
     <script src="../public/animations/animacion.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
 </body>
 
 </html>
