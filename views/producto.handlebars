@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title>Fisher Price</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
             <a id="carrito-icon" href="/checkout"><span class="carrito"></span><img src="/img/car.png" alt=""></a>
         </nav>
         <div class="landing">
-            <img src="/img/logo.png" alt="" id="logo">
+            <img src="/img/logo.png" alt="" id="logo" style="transform:matrix(1,0,0,1,0,0);">
         </div>
 
         <div class="producto">
@@ -44,7 +44,7 @@
         <div class="carril">
             {{#each imgs}}
             <div class="img-carril">
-                <img src="{{this}}" alt="">
+                <img src="{{this}}" width="400" height="300" alt="">
             </div>
             {{/each}}
         </div>
@@ -76,9 +76,10 @@
     <script>
         magnify("myimage",2);
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/gsap/1.12.2/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/css/plugin.min.js"></script>
-</body>
+    
+    <!--<script>
+        initComparisons();
+    </script>-->
+    </body>
 
 </html>
