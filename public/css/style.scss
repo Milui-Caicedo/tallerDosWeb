@@ -97,9 +97,17 @@ $green: #15BD00;
                 padding: 10px;
             }
         }
+        @media only screen and (max-width: 700px) {
+            ul{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
 
         #carrito-icon {
             position: absolute;
+            z-index: 3;
             right: 10px;
             display: flex;
 
@@ -158,7 +166,7 @@ $green: #15BD00;
                 flex-direction: column;
             }
 
-            select {
+            select{
                 flex-grow: 5;
                 padding: 7px;
                 margin: 7px;
@@ -178,6 +186,7 @@ $green: #15BD00;
         grid-gap: 10px;
         grid-template-columns: repeat(3, 1fr);
         margin: 20px auto 20px auto;
+        position: relative;
 
         @media only screen and (max-width: 700px) {
             grid-template-columns: repeat(2, 1fr);
@@ -187,11 +196,24 @@ $green: #15BD00;
         .item {
             padding: 15px;
             background-color: white;
+            position: relative;
+             
 
             img {
                 width: 100%;
                 border-bottom: 1px solid $bg;
                 margin-bottom: 5px;
+            }
+            .carrito-add{
+                position: absolute;
+                width: 25px;
+                padding: 5px;
+                top:0;
+                right: 0; 
+                background-color:  $azul;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
 
             h5,
@@ -219,6 +241,7 @@ $green: #15BD00;
 
             }
         }
+
     }
 
     .producto {
@@ -232,15 +255,34 @@ $green: #15BD00;
         @media only screen and (max-width: 700px) {
             width: 90%;
         }
+       
+       // * {box-sizing: border-box;}
 
-        .img {
+        .img-magnifier-container {
             flex-grow: 3;
             margin: 10px;
+            position: relative;
 
-            img {
-                width: 100%;
+            .img-magnifier-glass{
+                position: absolute;
+                border: 3px solid #000;
+                border-radius: 50%;
+                cursor: none;
+                width: 100px;
+                height: 100px;
+                transition: filter 0.1s;
+                filter: opacity(0);
+                
+            }
+
+            &:hover{
+                .img-magnifier-glass{
+                filter: opacity(1);
+        }
             }
         }
+
+        
 
         .info {
             color: $azul;
@@ -379,9 +421,12 @@ $green: #15BD00;
                 flex: 0;
             }
 
-            .item {
+            .item {/*
                 display: flex;
-                justify-content: flex-start;
+                justify-content: flex-start;*/
+                display: grid;
+                position: relative;
+                grid-template-columns: 1fr 5fr 1fr;
                 padding: 10px;
                 margin: 10px;
                 background-color: white;
@@ -389,16 +434,41 @@ $green: #15BD00;
 
                 @media only screen and (max-width: 700px) {
                     border-radius: 5px;
+                    grid-template-columns: 1fr 2fr 1fr;
+
+                }
+
+                .x{
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    font-family: $mont;
+                    transition: transform .3s;
+                    cursor: pointer;
+                    &:hover{
+                        color: black;
+                        transform: scale(1.5);
+                    }
                 }
 
                 .img {
-                    margin: 10px;
-
+                    //margin: 10px;
                     img {
                         width: 100px;
                     }
                 }
-
+                .cantidad{
+                    position: relative;
+                    >input{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        vertical-align: middle;
+                        height: 15px;
+                        width: 50px;
+                    }
+                }
                 .dato {
                     text-transform: capitalize;
                     margin-left: 10px;

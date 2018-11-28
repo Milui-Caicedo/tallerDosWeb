@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/style.css">
+
+
     <title>Document</title>
 </head>
 
@@ -51,21 +53,23 @@
         </div>
         <div id="productos">
             {{#each productos}}
-            <a href="/producto/{{name}}">
-                <div class="item {{#if descuento}}descuento{{/if}}">
-                    <img src="/img/{{name}}.jpg" alt="">
+            <div class="item {{#if descuento}}descuento{{/if}}" data-name="{{name}}">
+                <a href="/producto/{{name}}">
+                    <img src="/img/{{name}}.jpg" alt="" onclick="preventDefaul()">
                     <h5>{{marca}} - {{name}}</h5>
                     <div class="datos">
                         <h3>${{price}} <span>c/p</span></h3>
                         <div class="infito">
-                        <p>edad: {{age}} años</p>
-                        <p>tags: {{categoria}}</p>
+                            <p>edad: {{age}} años</p>
+                            <p>tags: {{categoria}}</p>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+                <img src="/img/car.png" class='carrito-add' alt="">
+            </div>
             {{/each}}
         </div>
+
         <div class="piezas">
             <img src="/img/borde2.png" alt="">
             <div class="repuesto">
@@ -84,6 +88,9 @@
     </div>
     <script src="/js/busqueda.js"></script>
     <script src="/js/actualizar.js"></script>
+    <script src="/animations/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
 </body>
 
 </html>

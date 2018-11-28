@@ -54,6 +54,7 @@ app.get('/', (reques, response) => {
     var contexto = {
       productos: docs,
     }
+    console.log(docs);
     response.render('index', contexto);
   });
 });

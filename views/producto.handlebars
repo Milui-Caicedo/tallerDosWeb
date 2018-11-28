@@ -24,9 +24,9 @@
         </div>
 
         <div class="producto">
-            <div class="img">
+            <div class="img-magnifier-container">
 
-                <img src="/img/{{name}}.jpg" alt="">
+                <img id="myimage" src="/img/{{name}}.jpg" width="450" height="400" alt="Juguete">
             </div>
             <div class="info" data-name="{{name}}">
                 <div class="title">
@@ -71,6 +71,11 @@
     </div>
     <script src="/js/actualizar.js"></script>
     <script src="/js/agregar.js"></script>
+    <script src="/animations/magnify.js"></script> 
+
+    <script>
+        magnify("myimage",2);
+    </script>
 </body>
 
 </html>
