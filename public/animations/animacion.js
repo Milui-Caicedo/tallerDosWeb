@@ -14,7 +14,12 @@
         tl.add(TweenLite.from(pro, 1, {opacity:0, y:50}));}
         //tl.add(TweenLite.to(pro, 3 ,{opacity:0, y:50}));
         //TweenLite.to(pro, 3 ,{opacity:0, y:50});
-    
+
+        var cartitem = document.querySelectorAll('.buyed');
+        if(cartitem != null){
+            //tl.add(stagger(cartitem,2,{opacity:0, x:-100}));
+            tl.add(TweenLite.from(cartitem,1,{opacity:0, x:-100}));
+        }
     
     }
     

@@ -11,7 +11,7 @@ sans-serif;
 
 $hobot: myFirstFont;
 $azul :#5DADC3;
-$bg: #D1D1D1;
+$bg: #FFFFFF;
 $green: #15BD00;
 
 * {
@@ -637,6 +637,39 @@ $green: #15BD00;
         opacity: 0.7;
         border-radius: 50%;
     }
+
+    .logo-awards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        
+        .logo-img{
+            margin-right:20px;
+        }
+        
+        .awards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .aw1{
+            margin-right:10px;
+        }
+
+        .aw2{
+            margin-right:10px;
+        }
+        .aw3{
+            margin-right:10px;
+        }
+    }
+
 
 
 }

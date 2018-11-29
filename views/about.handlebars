@@ -14,8 +14,8 @@
         <nav>
             <ul>
                 <li><a href="/about">Acerca de fisher price</a></li>
-                <li><a href="/tienda">Productos</a></li>
-                <li><a>Aplicaciones</a></li>
+                <li><a href="/">Productos</a></li>
+                <li><a >Aplicaciones</a></li>
             </ul>
             <a id="carrito-icon" href="/checkout"><span class="carrito"></span><img src="/img/car.png" alt=""></a>
         </nav>
@@ -23,47 +23,26 @@
             <a href="/tienda"><img class="img-landing" src="/img/logo.png" alt="Fisher Price"></a>
         </div>
 
-        <div class="producto">
-            <div class="img-magnifier-container">
-
-                <img id="myimage" src="/img/{{name}}.jpg" width="450" height="400" alt="Juguete">
+        <div class="logo-awards">
+            <div class="logo">
+                <img class="logo-img" src="/img/logo.png" width="350" height="150" alt="">
             </div>
-            <div class="info" data-name="{{name}}">
-                <div class="title">
-                    <h1>{{marca}} - {{name}}</h1>
-                    <h4>Edad: {{age}} años</h4>
+
+            <div class="awards">
+                <div class="aw1">
+                   <img class="aw1-img" src="/img/award1.jpg" width="150" height="150" alt="">
                 </div>
-                <div class="precio">
-
-                    <h3>Precio</h3>
-                    <h1>$ {{price}}</h1>
+                <div class="aw2">
+                   <img class="aw2-img" src="/img/award2.png" width="150" height="170" alt="">
                 </div>
-                <button id="add">Agregar al carrito</button>
+                <div class="aw3">
+                   <img class="aw3-img" src="/img/award3.jpg" width="150" height="150" alt="">
+                </div>
             </div>
-        </div>
-        <div class="carril">
-            {{#each imgs}}
-            <div class="img-carril">
-                <img src="{{this}}"  alt="">
-            </div>
-            {{/each}}
-        </div>
-        <div class="carct">
-            <h1>Caracteristicas del producto</h1>
-            <p>{{carac}}</p>
+            
         </div>
 
-        <div class="piezas">
-            <img src="/img/borde2.png" alt="">
-            <div class="repuesto">
-                <h1>¿Necesitas piezas de repuesto?</h1>
-                <h3>las puedes ordenar por nuestra página de servicio al cliente</h3>
-            </div>
-            <img src="/img/boder1.png" alt="">
-        </div>
-        <div class="more-info">
-            <h1>+ Más información</h1>
-        </div>
+
         <footer>
             <section class="footer__gray">
             <article>
@@ -92,15 +71,13 @@
     <script src="/js/actualizar.js"></script>
     <script src="/js/agregar.js"></script>
     <script src="/animations/magnify.js"></script> 
-    <script src="/animations/animacion.js"></script>
+    <script src="/animations/awards.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
     
 
-    <script>
-        magnify("myimage",2);
-    </script>
+    
     
     
     </body>

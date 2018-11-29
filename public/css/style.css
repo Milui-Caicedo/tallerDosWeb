@@ -60,11 +60,11 @@
 
 * button:hover {
   border: 1px solid #5DADC3;
-  background-color: #D1D1D1;
+  background-color: #FFFFFF;
 }
 
 .container {
-  background-color: #D1D1D1;
+  background-color: #FFFFFF;
 }
 
 .container nav {
@@ -232,7 +232,7 @@
 
 .container .productos .item img {
   width: 100%;
-  border-bottom: 1px solid #D1D1D1;
+  border-bottom: 1px solid #FFFFFF;
   margin-bottom: 5px;
 }
 
@@ -365,7 +365,7 @@
 }
 
 .container .producto .info .title {
-  border-bottom: 1px solid #D1D1D1;
+  border-bottom: 1px solid #FFFFFF;
   padding: 5px;
 }
 
@@ -418,7 +418,7 @@
   margin: auto;
   color: gray;
   background-color: white;
-  border-top: 1px solid #D1D1D1;
+  border-top: 1px solid #FFFFFF;
 }
 
 @media only screen and (max-width: 700px) {
@@ -596,7 +596,7 @@
   text-transform: capitalize;
   margin-left: 10px;
   padding-left: 10px;
-  border-left: 1px solid #D1D1D1;
+  border-left: 1px solid #FFFFFF;
   color: #5DADC3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -765,5 +765,58 @@
   background-color: #2196F3;
   opacity: 0.7;
   border-radius: 50%;
+}
+
+.container .logo-awards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+.container .logo-awards .logo-img {
+  margin-right: 20px;
+}
+
+.container .logo-awards .awards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .logo-awards .aw1 {
+  margin-right: 10px;
+}
+
+.container .logo-awards .aw2 {
+  margin-right: 10px;
+}
+
+.container .logo-awards .aw3 {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */

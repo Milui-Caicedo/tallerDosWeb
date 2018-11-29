@@ -102,6 +102,10 @@ app.get('/checkout', (reques, response) => {
   response.render('checkout');
 });
 
+app.get('/about',(reques,response) => {
+  response.render('about');
+});
+
 app.post('/agregarinfo', (reques, response) => {
   console.log(reques.body);
   if (reques.body.name)
