@@ -15,13 +15,18 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-client.connect(function (err) {
-  if (err) {
-    console.error(err);
-    return;
+MongoClient.connect('mongodb+srv://cluster0-8j5ve.mongodb.net/tienda',
+{
+  auth: {
+    user: 'Luisa Caicedo',
+    password: '0715LmCB11'
   }
 
-  db = client.db(dbName);
+}, function(err, client){
+  if(err) throw err;
+  db = client.db('tienda');
+  app.listen(process.env.PORT || 1234);
+
 });
 
 
