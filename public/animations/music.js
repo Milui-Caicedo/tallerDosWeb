@@ -1,6 +1,6 @@
 
 
-var disco = document.getElementById("disk");
+var disco = document.querySelector(".disk");
 
 var on = document.getElementById('encendido')
 var astro = document.getElementById('solyluna');
@@ -22,9 +22,13 @@ function playSongTwo(){
 
 var soundthree = document.getElementById("song__three");
 function playSongThree(){
+    if(on.getAttribute("status")=="off"){
     sound.pause();
     soundtwo.pause(); 
     soundthree.play();
+    }else{sound.pause();
+        soundtwo.pause(); 
+        soundthree.pause();};
 }
 
 on.addEventListener('click',(e)=>{
@@ -37,7 +41,7 @@ on.addEventListener('click',(e)=>{
             var estrella = document.querySelectorAll('.star')[i]; 
             estrella.style.display = "inline-block";  
         }
-        bg.style.background = "#6D96FF";
+        bg.style.backgroundImage = "url('/img/noche.jpg')";
         disco.style.animation = "sound 1s linear 0s infinite";
     }else{
         on.setAttribute("status","on");
@@ -46,17 +50,12 @@ on.addEventListener('click',(e)=>{
             var estrella = document.querySelectorAll('.star')[i]; 
             estrella.style.display = "none";  
         }
-        bg.style.background = "#0CC3E8";
+        bg.style.backgroundImage = "url('/img/dia.jpg')";
         disco.style.animation = "none";
-        stop();
+        sound.pause();
+        soundtwo.pause();
+        soundthree.pause();
     };
-
-function stop(){
-    sound.pause();
-    soundtwo.pause();
-    soundthree.pause();
-}
-
     
 });
 

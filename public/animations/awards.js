@@ -8,21 +8,21 @@ window.onload = function(){
     tl.add(TweenMax.to(aw, 0.5, {opacity:0, delay:0.4}));*/
 
     // animaion del logo
-    var logo = document.querySelector(".logo-img");
-    tl.add(TweenMax.from(logo, 0.5 ,{opacity:0, scale:0, ease:Bounce.easeOut}))
+    //var logo = document.querySelector(".logo-img");
+    //tl.add(TweenMax.from(logo, 2 ,{opacity:0, scale:0, ease:Bounce.easeOut}))
 
     //console.log(logo);
     //TweenLite.to(logo, 2, {bezier:[{left:100, top:50}, {left:100, top:0}, {left:200, top:150}], ease:Power1.easeInOut});
     
     //vamos si funciona la transicion de los productos XD
     var aw1 = document.querySelector(".aw1-img");  
-    tl.add(TweenMax.from(aw1, 0.5, {opacity:0, y:200, scale:0, ease:Bounce.easeOut}));
+    tl.add(TweenMax.from(aw1, 2, {opacity:0, y:200, scale:0, ease:Bounce.easeOut}));
 
     var aw2 = document.querySelector(".aw2-img");  
-    tl.add(TweenMax.from(aw2, 0.5, {opacity:0, y:200, scale:0, ease:Bounce.easeOut}));
+    tl.add(TweenMax.from(aw2, 2, {opacity:0, y:200, scale:0, ease:Bounce.easeOut}));
 
     var aw3 = document.querySelector(".aw3-img");  
-    tl.add(TweenMax.from(aw3, 0.5, {opacity:0, y:200, scale:0, ease:Bounce.easeOut}));
+    tl.add(TweenMax.from(aw3,2, {opacity:0, y:200, scale:0, ease:Bounce.easeOut}));
 
     /*var general = document.querySelector(".logo-img");
     tl.add(TweenMax.to(general, 0.5, {opacity:0, delay:0.4}))*/
