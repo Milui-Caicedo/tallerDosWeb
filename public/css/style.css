@@ -861,11 +861,26 @@
 
 .container main {
   background-color: #0CC3E8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container #song {
-  -webkit-transition: 1;
-  transition: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .container #song:hover {
@@ -875,7 +890,7 @@
           transition-delay: 0.2;
 }
 
-.container #disk {
+.container .disk {
   width: 300px;
   height: 300px;
   -webkit-transform: rotate(0deg);
@@ -1015,5 +1030,37 @@
     width: 35px;
     height: 35px;
   }
+}
+
+.container main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.container #astros {
+  width: 80%;
+  height: 150px;
+}
+
+.container .disquitos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-item: center;
+}
+
+.container .disquitos .cajamusical {
+  margin-left: 60px;
 }
 /*# sourceMappingURL=style.css.map */

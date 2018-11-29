@@ -23,20 +23,34 @@
     
     
     <main>
-    <img src="/img/sun.gif" alt="" id="solyluna">
+        <div id="astros"><img src="/img/sun.gif" alt="" id="solyluna" width="150" ></div>
+    
     <div id="cielo">
         <div id="strellas"></div>
-        <div id="estrellasdos"></div>
     </div>
-    <div id="cajamusical">
-        <div id="disk"><img src="/img/disco.gif" alt="" ></div>
+    
+    <div class="disquitos">
+    <div class="cajamusical">
+        <div class="disk"><img src="/img/disco.gif" alt="" ></div>
     </div>
-    <div id=controles>
-        <button id="encendido" status="off">Start</button>
-        <img src="/img/disco.gif" alt="" width="150"  id="song">
-        <img src="/img/disco.gif" alt="" width="150"  id="song">
-        <img src="/img/disco.gif" alt="" width="150" id="song">
+    <div id="controles">
+        <audio id="song__one">
+        <source src="/audio/Your Song - Lullaby Renditions of Elton John - Rockabye Baby.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="song__two">
+        <source src="/audio/Babies Go Beatles Vol.2 - Here comes the sun.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="song__three">
+        <source src="/audio/Babies Go Beatles   Obladi Oblada.mp3" type="audio/mpeg">
+        </audio>
+        
+        <img src="/img/disco.gif" alt="" width="150"  id="song" onclick="playSongOne()">
+        <img src="/img/disco.gif" alt="" width="150"  id="song" onclick="playSongTwo()">
+        <img src="/img/disco.gif" alt="" width="150" id="song" onclick="playSongThree()">
     </div>
+    </div>
+
+    <button id="encendido" status="off">Start</button>
     
 </main>
 
@@ -66,19 +80,12 @@
     </footer>
     </div>
     <script>
-    for(var i=0; i<16;i++){
+    for(var i=0; i<30;i++){
         var star = document.createElement("div");
         star.className = "star";
         document.getElementById("strellas").appendChild(star);
     }
     </script>
-    <script>
-            for(var i=0; i<16;i++){
-                var star = document.createElement("div");
-                star.className = "star";
-                document.getElementById("estrellasdos").appendChild(star);
-            }
-            </script>
     <script src="/animations/music.js"></script>
     <script src="/animations/animacion.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>

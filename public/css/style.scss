@@ -713,10 +713,16 @@ $green: #15BD00;
     }
 
     main{
-        background-color: #0CC3E8; 
+        background-color: #0CC3E8;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap; 
+        justify-content: flex-start;
+        align-items:center;
     }
+
     #song{
-        transition: 1; 
+        transition: 1s; 
     }
     
     #song:hover{
@@ -724,7 +730,7 @@ $green: #15BD00;
        transition-delay: 0.2;
     }
     
-    #disk{
+    .disk{
         width: 300px;
         height: 300px;
         transform: rotate(0deg);
@@ -781,7 +787,28 @@ $green: #15BD00;
             box-shadow: none; opacity: 1; width: 35px; height: 35px;
         }
     }
+
+    main{
+        display: flex;
+        width:100%;     
+    }
+
+    #astros{
+        width:80%;
+        height: 150px;
+    }
     
+    .disquitos{
+        display:flex;
+        flex-direction: column;
+        flex-wrap:nowrap;
+        justify-content:center;
+        align-item:center;
+
+        .cajamusical{
+            margin-left:60px;
+        }
+    }
 
 
 

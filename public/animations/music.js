@@ -6,6 +6,27 @@ var on = document.getElementById('encendido')
 var astro = document.getElementById('solyluna');
 var bg = document.querySelector('main');
 
+var sound = document.getElementById("song__one");
+function playSongOne(){
+    soundtwo.pause();
+    soundthree.pause();
+    sound.play();
+}
+
+var soundtwo = document.getElementById("song__two");
+function playSongTwo(){
+    sound.pause();
+    soundthree.pause();
+    soundtwo.play();
+}
+
+var soundthree = document.getElementById("song__three");
+function playSongThree(){
+    sound.pause();
+    soundtwo.pause(); 
+    soundthree.play();
+}
+
 on.addEventListener('click',(e)=>{
     //rotateAnimation(disco,10);
     //console.log("hola");
@@ -27,7 +48,15 @@ on.addEventListener('click',(e)=>{
         }
         bg.style.background = "#0CC3E8";
         disco.style.animation = "none";
+        stop();
     };
+
+function stop(){
+    sound.pause();
+    soundtwo.pause();
+    soundthree.pause();
+}
+
     
 });
 
