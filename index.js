@@ -106,6 +106,10 @@ app.get('/about',(reques,response) => {
   response.render('about');
 });
 
+app.get('/apps',(reques,response) => {
+  response.render('apps');
+});
+
 app.post('/agregarinfo', (reques, response) => {
   console.log(reques.body);
   if (reques.body.name)

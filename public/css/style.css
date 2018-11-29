@@ -858,4 +858,162 @@
   line-height: 150%;
   margin-top: 15px;
 }
+
+.container main {
+  background-color: #0CC3E8;
+}
+
+.container #song {
+  -webkit-transition: 1;
+  transition: 1;
+}
+
+.container #song:hover {
+  -webkit-transform: translate(0px, -20px);
+          transform: translate(0px, -20px);
+  -webkit-transition-delay: 0.2;
+          transition-delay: 0.2;
+}
+
+.container #disk {
+  width: 300px;
+  height: 300px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  position: relative;
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes sound {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes sound {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.container #strellas {
+  width: 100%;
+}
+
+.container .star {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  border-radius: 50%;
+  display: none;
+}
+
+.container #cielo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.container .star:nth-child(odd) {
+  background: #ffffff;
+  opacity: 1;
+  -webkit-box-shadow: 1px 1px 15px #ffffff, -1px -1px 15px #ffffff;
+          box-shadow: 1px 1px 15px #ffffff, -1px -1px 15px #ffffff;
+  -webkit-animation: star-pulse-1 0.5s linear 0s infinite alternate;
+          animation: star-pulse-1 0.5s linear 0s infinite alternate;
+}
+
+.container .star:nth-child(even) {
+  background: #FFF171;
+  opacity: 0.3;
+  -webkit-box-shadow: 1px 1px 15px #FFF171, -1px -1px 15px #FFF171;
+          box-shadow: 1px 1px 15px #FFF171, -1px -1px 15px #FFF171;
+  -webkit-animation: star-pulse-2 0.5s linear 0s infinite alternate;
+          animation: star-pulse-2 0.5s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes star-pulse-1 {
+  from {
+    -webkit-box-shadow: 1px 1px 15px #ffffff, -1px -1px 15px #ffffff;
+            box-shadow: 1px 1px 15px #ffffff, -1px -1px 15px #ffffff;
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+  }
+  to {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: 0.3;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@keyframes star-pulse-1 {
+  from {
+    -webkit-box-shadow: 1px 1px 15px #ffffff, -1px -1px 15px #ffffff;
+            box-shadow: 1px 1px 15px #ffffff, -1px -1px 15px #ffffff;
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+  }
+  to {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: 0.3;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@-webkit-keyframes star-pulse-2 {
+  from {
+    -webkit-box-shadow: 1px 1px 15px #FFF171, -1px -1px 15px #FFF171;
+            box-shadow: 1px 1px 15px #FFF171, -1px -1px 15px #FFF171;
+    opacity: 0.3;
+    width: 20px;
+    height: 20px;
+  }
+  to {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@keyframes star-pulse-2 {
+  from {
+    -webkit-box-shadow: 1px 1px 15px #FFF171, -1px -1px 15px #FFF171;
+            box-shadow: 1px 1px 15px #FFF171, -1px -1px 15px #FFF171;
+    opacity: 0.3;
+    width: 20px;
+    height: 20px;
+  }
+  to {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

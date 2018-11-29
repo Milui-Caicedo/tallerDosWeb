@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +7,12 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Fisher Price</title>
 </head>
-
 <body>
     <div class="container">
         <nav>
             <ul>
                 <li><a href="/about">Acerca de fisher price</a></li>
-                <li><a href="/">Productos</a></li>
+                <li><a href="/tienda">Productos</a></li>
                 <li><a href="/apps">Aplicaciones</a></li>
             </ul>
             <a id="carrito-icon" href="/checkout"><span class="carrito"></span><img src="/img/car.png" alt=""></a>
@@ -22,47 +20,28 @@
         <div class="landing">
             <a href="/tienda"><img class="img-landing" src="/img/logo.png" alt="Fisher Price"></a>
         </div>
+    
+    
+    <main>
+    <img src="/img/sun.gif" alt="" id="solyluna">
+    <div id="cielo">
+        <div id="strellas"></div>
+        <div id="estrellasdos"></div>
+    </div>
+    <div id="cajamusical">
+        <div id="disk"><img src="/img/disco.gif" alt="" ></div>
+    </div>
+    <div id=controles>
+        <button id="encendido" status="off">Start</button>
+        <img src="/img/disco.gif" alt="" width="150"  id="song">
+        <img src="/img/disco.gif" alt="" width="150"  id="song">
+        <img src="/img/disco.gif" alt="" width="150" id="song">
+    </div>
+    
+</main>
 
-        <div class="content">
-            <h1>Nuestra historia</h1>
-            <p>Desde el principio, hemos hecho juguetes que atraen la imaginación,<br>
-            que hacen algo nuevo, sorprendente y divertido. En el camino, introdujimos artículos para bebé.<br>
-            Siempre hemos mantenido la visión de nuestros fundadores en el corazón de lo que hacemos,<br>
-            y recordamos lo que comenzó todo: una sonrisa. Hoy nuestra misión sigue siendo la misma:<br>
-            enriquecer las vidas de las familias jóvenes, brindar alegría a las generaciones y fomentar lo que es la naturaleza única de cada niño.<br>
-            Esperamos que te guste leer nuestras historias tanto como nos ha gustado hacerlas</p>
-        </div>
-
-           <div class="awards-title">
-               <h1>Nuestros premios</h1>
-           </div>
-
-        <div class="logo-awards">
-           
-            <div class="logo">
-                <img class="logo-img" src="/img/logo.png" width="550" height="250" alt="">
-            </div>
-
-            <div class="awards">
-                <div class="aw1">
-                   <img class="aw1-img" src="/img/award1.jpg" width="150" height="160" alt="">
-                </div>
-                <div class="aw2">
-                   <img class="aw2-img" src="/img/award2.png" width="140" height="170" alt="">
-                </div>
-                <div class="aw3">
-                   <img class="aw3-img" src="/img/award3.jpg" width="120" height="120" alt="">
-                </div>
-            </div>
-            
-        </div>
-
-        
-         
-
-
-        <footer>
-            <section class="footer__gray">
+    <footer>
+        <section class="footer__gray">
             <article>
                 <section class="footer__left">
                         <ul>
@@ -84,20 +63,27 @@
         </section>
             <a href="/"><img src="/img/logo.png" alt=""></a>
             <div class="red-border"></div>
-        </footer>
+    </footer>
     </div>
-    <script src="/js/actualizar.js"></script>
-    <script src="/js/agregar.js"></script>
-    <script src="/animations/magnify.js"></script> 
-    <script src="/animations/awards.js"></script>
+    <script>
+    for(var i=0; i<16;i++){
+        var star = document.createElement("div");
+        star.className = "star";
+        document.getElementById("strellas").appendChild(star);
+    }
+    </script>
+    <script>
+            for(var i=0; i<16;i++){
+                var star = document.createElement("div");
+                star.className = "star";
+                document.getElementById("estrellasdos").appendChild(star);
+            }
+            </script>
+    <script src="/animations/music.js"></script>
+    <script src="/animations/animacion.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
-    
 
-    
-    
-    
-    </body>
-
+</body>
 </html>

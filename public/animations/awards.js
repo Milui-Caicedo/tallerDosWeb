@@ -10,7 +10,7 @@ window.onload = function(){
     // animaion del logo
     var logo = document.querySelector(".logo-img");
     tl.add(TweenMax.from(logo, 0.5 ,{opacity:0, scale:0, ease:Bounce.easeOut}))
-    tl.restart();
+
     //console.log(logo);
     //TweenLite.to(logo, 2, {bezier:[{left:100, top:50}, {left:100, top:0}, {left:200, top:150}], ease:Power1.easeInOut});
     
